@@ -1,16 +1,15 @@
 "use client";
 
-import Image from "next/image";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
 
-import { Button } from "../ui/button";
-import {toast} from "@/hooks/use-toast";
-import {signIn} from "next-auth/react";
-import ROUTES from "@/constants/routes";
+import { Button } from '../ui/button';
+import { toast } from '@/hooks/use-toast';
+import { signIn } from 'next-auth/react';
+import ROUTES from '@/constants/routes';
 
 const SocialAuthForm = () => {
-    const buttonClass =
-        "background-dark400_light900 body-medium text-dark200_light800 min-h-12 flex-1 rounded-2 px-4 py-3.5";
+    const buttonClass = "background-dark400_light900 body-medium text-dark200_light800 min-h-12 flex-1 rounded-2 px-4 py-3.5";
 
     const handleSignIn = async (provider: "github" | "google") => {
         try {
